@@ -36,3 +36,7 @@ React embodies a framework for creating web applications that replaces the previ
 [React's Component Documentation](Instead of worrying about manipulating the DOM directly, React adds a layer between you and the actual DOM
 Reconciliation: Process where react compares changes between virtual DOM and real DOM, then makes the fewest DOM changes necessary
 )
+
+---
+
+[RELEASE] Introduction ⇧
