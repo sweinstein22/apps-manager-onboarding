@@ -22,6 +22,8 @@ func main() {
 	case "all":
 		modules = []string{
 			"introduction.prolific",
+			"reactconcepts.prolific",
+			"todoapp.prolific",
 		}
 	default:
 		log.Fatalf("Unrecognized track type '%s', only 'all' is supported", trackName)
