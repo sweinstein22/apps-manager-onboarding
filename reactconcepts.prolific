@@ -1,0 +1,35 @@
+Components
+
+### Why?
+1. React has three core concepts that enable all the functionality of a React application. The first that we're going to talk about is components.
+1. Ultimately, components allow developers to create abstraction layers within an application, and reuse pieces of code
+1. For those with a more back-end background, these concepts may sound similar to those that back Object Oriented Programming
+
+### How?
+1. All React code is created in terms of components. They can have a variety of methods and variables in them, but the one thing that must be present is the `render` method.
+1. The `render` method tells the component what to visually display in the application.
+
+### Structure of a React Class Component
+1. React component definitions will follow a common structure
+![React_Definition_Diagram]()
+
+### Functional Components vs Class Components
+1. Generally when talking about components we will be referring to class components. However, there are two different types of components, functional and class.
+1. They used to have different use cases, but in React 16.8 a feature called Hooks was introduced that allows them to be used more interchangeably.
+1. Previously, functional components had to be stateless and could not use React lifecycle methods. There are now hooks for this (`useState` and `useEffect` respectively).
+1. As of now most of Apps Manager's code is written as class components
+
+### Resources
+1. [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+
+---
+
+Props
+
+---
+
+State
+
+---
+
+[RELEASE] Main concepts behind React ⇧
