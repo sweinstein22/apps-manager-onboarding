@@ -1,0 +1,71 @@
+Creating your first React App
+
+### Why?
+1. We're going to get started by building a fairly simple app to-do list app using React.
+1. Ultimately the functionality we're aiming for is the ability to add items to the list and check off items.
+1. Through this process, we'll touch on a few of the key concepts behind React applications.
+
+### How?
+1. The best way to have a quick and reliable React boilerplate is to install [create-react-app](https://facebook.github.io/create-react-app/).
+1. Start by running `npx create-react-app todo_list_app` and cd into the folder created. Run `yarn start` to kick off the development server.
+
+### Expected Result
+1. When navigating to `http://localhost:3000/`, you should see the React logo. This is your application! We'll edit the app in our next story to start our to-do list app.
+
+### Resources
+1. [Create React App Docs](https://facebook.github.io/create-react-app/docs/getting-started)
+
+---
+
+Creating a Component and the Render Method
+
+### Why?
+1. All React code is created in terms of components. They can have a variety of methods and variables in them, but the one thing that must be present is the `render` method.
+1. The `render` method tells the component what to visually display in the application.
+
+### Syntax
+1. To begin defining a component, we add `class ToDoList extends Component` to the top of a file. You can see an example of this in your `todo_list_app` src folder, App.js file.
+1. Components are initialized using the syntax `<MyComponent>{children}</MyComponent` or `<MyComponent/>` depending on whether they are self-closing components.
+
+### Self-Closing Components
+1. A self closing component is a component that does not need any code in between the opening and closing tags.
+1. For example, `svg` components do not need content, just a `src` property.
+
+To see these things in action, check out [this JSFiddle]()
+
+---
+
+Component State
+
+### Why?
+Our appliction will need to have two pieces of information at its disposal:
+1. The list items that should be rendered in our list
+1. The value of the input to be added to our list of items when the submit button is clicked
+
+### How?
+Our constructor should initialize state as an object with two keys:
+1. items, which should be an empty array
+1. term, which should be an empty string
+
+### Expected Result
+1. Adding these two elements should not render any visible changes in the application, but ensure that the application compiles correctly before moving on to the next story.
+
+### Resources
+1. [React Component State Documentation](https://reactjs.org/docs/faq-state.html)
+
+---
+
+Splitting out a secondary component
+
+### Why?
+Componentizing aspects of the code allows us to reuse that bit of code rather than duplicating code
+
+### How?
+1. If you want this component to be available to other components, we have to export it in the application definition:
+`export default class ListItem extends Component`
+1. If you use the `default` keyword, you can then import the component using the syntax `import ListItem from '../list_item.js'`
+1. If you omit the `default` keyword, you then import the component using the syntax `import {ListItem} from '../list_item.js'`
+
+---
+
+[RELEASE] Creating your first React app ⇧
