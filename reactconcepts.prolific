@@ -14,6 +14,10 @@ Components
 1. React component definitions will follow a common structure
 ![React_Component_Structure](https://github.com/sweinstein22/apps-manager-onboarding/images/react-component-structure.png)
 
+### Self-Closing Components
+1. A self closing component is a component that does not need any code in between the opening and closing tags.
+1. For example, `svg` components do not need content, just a `src` property.
+
 ### Functional Components vs Class Components
 1. Generally when talking about components we will be referring to class components. However, there are two different types of components, functional and class.
 1. They used to have different use cases, but in React 16.8 a feature called Hooks was introduced that allows them to be used more interchangeably.
