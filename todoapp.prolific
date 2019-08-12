@@ -96,7 +96,7 @@ Our appliction will need to have the list items that should be rendered in our l
 Configurability
 
 ### Why?
-1. At this stage we have a to do list app that's fairly useless, given that it only shows our filler values. Let's add a form to make the list more dynamic.
+- At this stage we have a to do list app that's fairly useless, given that it only shows our filler values. Let's add a form to make the list more dynamic.
 
 ### How?
 - We need a simple form that consists of an text input and a submit button
