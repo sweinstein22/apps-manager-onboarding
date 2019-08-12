@@ -2,10 +2,10 @@ Welcome to the Apps Manager Onboarding Tracker!
 
 ### What?
 This onboarding tracker is a self-paced, guided exploration of React and associated technologies. Things to remember during this process:
-1. We hope it gives you a coherent, if cursory, overview of a complicated product. We don't expect you to have mastered all the topics in this tracker, this is just a base to build on.
-1. You're not alone throughout this experience, even if you are soloing through this tracker backlog. Feel free to grab a teammate if you have questions at any point.
-1. This is all optional work, meant to help you learn. Feel free to skip stories that don't feel like they will enhance your knowledge, especially if there are things you already know.
-1. The stories in this backlog are a living resource, and suggestions for changes are welcome!
+- We hope it gives you a coherent, if cursory, overview of a complicated product. We don't expect you to have mastered all the topics in this tracker, this is just a base to build on.
+- You're not alone throughout this experience, even if you are soloing through this tracker backlog. Feel free to grab a teammate if you have questions at any point.
+- This is all optional work, meant to help you learn. Feel free to skip stories that don't feel like they will enhance your knowledge, especially if there are things you already know.
+- The stories in this backlog are a living resource, and suggestions for changes are welcome!
 
 ---
 
@@ -15,21 +15,21 @@ React Introduction
 React embodies a framework for creating web applications that replaces the previous HTML based application flow. React is used to build a single-page application, meaning the app is a single page and the content of that page is replaced depending on the context of the user's location within the app. This could be achieved without React, but there are challenges that React handles without developers having to think about them. Let's take a look at what these challenges are.
 
 ### Keeping data in sync with UI elements
-![React Lifecycle Events](https://github.com/sweinstein22/apps-manager-onboarding/images/react-lifecycle-methods.png)
-1. Without React, the application would have to consciously listen for new information coming in that might affect what the app is displaying to the user.
-1. React tracks everything for you, all you need to worry about is the end-state of the UI previously. It re-renders things every time new information comes through.
-1. The developer can also program certain things to happen when these lifecycle events happen by adding methods using these names, more on this later!
+![React Lifecycle Events](https://github.com/sweinstein22/apps-manager-onboarding/blob/master/images/react-lifecycle-methods.png)
+- Without React, the application would have to consciously listen for new information coming in that might affect what the app is displaying to the user.
+- React tracks everything for you, all you need to worry about is the end-state of the UI previously. It re-renders things every time new information comes through.
+- The developer can also program certain things to happen when these lifecycle events happen by adding methods using these names, more on this later!
 
 ### Slow DOM manipulation
-1. Manipulating the DOM directly can take a lot of time, causing slow rendering time for applications
-1. Instead of worrying about manipulating the DOM directly, React adds a layer between you and the actual DOM, called the virtual DOM
-1. _Reconciliation:_ Process where React compares changes between virtual DOM and real DOM, then makes the fewest DOM changes necessary to achieve the desired end state
+- Manipulating the DOM directly can take a lot of time, causing slow rendering time for applications
+- Instead of worrying about manipulating the DOM directly, React adds a layer between you and the actual DOM, called the virtual DOM
+- _Reconciliation:_ Process where React compares changes between virtual DOM and real DOM, then makes the fewest DOM changes necessary to achieve the desired end state
 
 ### Filling in HTML templates for the page using Javascript
-1. Rather than worrying about the page as a whole, React encourages turning pieces of code into modular, self-contained components
-1. Components can be composed within each other to get to the end result you’re aiming for without having to worry about the entire end result at once
-1. React also allows us to use JSX, which lets us put HTML-like structures and Javascript together
-![JSX vs Javascript Only](https://github.com/sweinstein22/apps-manager-onboarding/images/jsx-vs-js-only.png)
+- Rather than worrying about the page as a whole, React encourages turning pieces of code into modular, self-contained components
+- Components can be composed within each other to get to the end result you’re aiming for without having to worry about the entire end result at once
+- React also allows us to use JSX, which lets us put HTML-like structures and Javascript together
+![JSX vs Javascript Only](https://github.com/sweinstein22/apps-manager-onboarding/blob/master/images/jsx-vs-js-only.png)
 
 ### Resources
 [Diagram with less common lifecycle methods](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
