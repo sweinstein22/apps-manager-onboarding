@@ -55,13 +55,13 @@ Building out the to do list
 
 ---
 
-Splitting out a secondary component
+Splitting out a secondary component and using props
 
 ### Why?
 Componentizing aspects of the code allows us to reuse that bit of code rather than duplicating code
 
 ### How?
-1. Let's put this component in its own file called `ListItem.js`
+1. Let's put this component in its own file called `ListItem.js`. Consider what elements of the list item would be helpful to have coming through as props.
 1. If you want this component to be available to other components, we have to export it in the application definition:
 `export default class ListItem extends Component`
 1. If you use the `default` keyword, you can then import the component using the syntax `import ListItem from '../list_item.js'`
@@ -69,6 +69,7 @@ Componentizing aspects of the code allows us to reuse that bit of code rather th
 
 ### Expected Result
 1. This essentially constitutes a refactor, and therefore should not result in any visual changes in your app.
+1. In your code, we now expect to see `<ListItem>` tags rather than `<input>` tags.
 
 ---
 
@@ -84,11 +85,53 @@ Our appliction will need to have the list items that should be rendered in our l
 1. For those more familiar with back end languages, mapping over a list is similar to using a for loop to do something for every element of a list
 
 ### Expected Result
-1. This is another refactor, so you should again not see any change in your app
+1. This is another refactor, so you should again not see any change in your app.
+1. In your code, the data that makes a list item unique should now be in state.
 
 ### Resources
 1. [React Component State Documentation](https://reactjs.org/docs/faq-state.html)
 1. [Looping through arrays in React](https://medium.com/javascript-in-plain-english/how-to-loop-through-arrays-in-react-3eaa8a14445)
+
+---
+
+Configurability
+
+### Why?
+1. At this stage we have a to do list app that's fairly useless, given that it only shows our filler values. Let's add a form to make the list more dynamic.
+
+### How?
+1. We need a simple form that consists of an text input and a submit button
+1. When that submit button is clicked, we should take the value in the text input and add it to our state as a list item, as well as clear out the input
+1. A great way to keep track of the value of the input is to put it in state.
+1. There's a tutorial in the resources below around building out a simple form if you need help getting started.
+
+### Bonus Functionality
+1. There are many ways you could continue to enhance the functionality of the form at this point if you feel like exploring more.
+1. For example, consider adding a button to clear out the text input, or clear out the entire to do list. Consider disabling the submit button for the text input if it is an empty string.
+
+### Expected Result
+1. We should now start with an empty list that we can add items to - congrats we have a functional form!
+
+### Resources
+1. [Simple Forms in React](https://vegibit.com/a-simple-react-js-form-example/)
+
+---
+
+Bonus: Stylistic Details
+
+### Why?
+1. Your to do list should now be fully functional! But purely functional does not make for great design.
+1. To give users a better sense of what items have been checked off, we can add styling to the list items that have been checked off, for example by adding a classname that makes the text gray and puts a line through it.
+
+### How?
+1. Consider how you might know whether a list item is checked off or not, and how to dynamically add classnames based on that knowledge (there's a resource below that will help!)
+
+### Expected Result
+1. When list items are checked off, there should now be additional styling to give users a visual representation of what tasks have been completed.
+1. At this point you've officially created your first React app, and walked through a lot of concepts along the way. Hopefully you've learned a lot, and if you'd like to try stepping through more React projects there are plenty of tutorials around the internet.
+
+### Resources
+1. [Dynamic classnames library](https://www.npmjs.com/package/classnames)
 
 ---
 
