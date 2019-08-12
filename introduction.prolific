@@ -15,7 +15,7 @@ React Introduction
 React embodies a framework for creating web applications that replaces the previous HTML based application flow. React is used to build a single-page application, meaning the app is a single page and the content of that page is replaced depending on the context of the user's location within the app. This could be achieved without React, but there are challenges that React handles without developers having to think about them. Let's take a look at what these challenges are.
 
 ### Keeping data in sync with UI elements
-![React Lifecycle Events](https://github.com/sweinstein22/apps-manager-onboarding/blob/master/images/react-lifecycle-methods.png)
+![React Lifecycle Events](https://raw.githubusercontent.com/sweinstein22/apps-manager-onboarding/master/images/react-lifecycle-methods.png)
 - Without React, the application would have to consciously listen for new information coming in that might affect what the app is displaying to the user.
 - React tracks everything for you, all you need to worry about is the end-state of the UI previously. It re-renders things every time new information comes through.
 - The developer can also program certain things to happen when these lifecycle events happen by adding methods using these names, more on this later!
@@ -29,7 +29,7 @@ React embodies a framework for creating web applications that replaces the previ
 - Rather than worrying about the page as a whole, React encourages turning pieces of code into modular, self-contained components
 - Components can be composed within each other to get to the end result you’re aiming for without having to worry about the entire end result at once
 - React also allows us to use JSX, which lets us put HTML-like structures and Javascript together
-![JSX vs Javascript Only](https://github.com/sweinstein22/apps-manager-onboarding/blob/master/images/jsx-vs-js-only.png)
+![JSX vs Javascript Only](https://raw.githubusercontent.com/sweinstein22/apps-manager-onboarding/master/images/jsx-vs-js-only.png)
 
 ### Resources
 [Diagram with less common lifecycle methods](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
