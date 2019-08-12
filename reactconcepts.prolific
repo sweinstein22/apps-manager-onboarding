@@ -1,64 +1,64 @@
 Components
 
 ### Why?
-1. React has three core concepts that enable all the functionality of a React application. The first that we're going to talk about is components.
-1. Ultimately, components allow developers to create abstraction layers within an application, and reuse pieces of code
-1. For those with a more back-end background, these concepts may sound similar to those that back Object Oriented Programming
+- React has three core concepts that enable all the functionality of a React application. The first that we're going to talk about is components.
+- Ultimately, components allow developers to create abstraction layers within an application, and reuse pieces of code
+- For those with a more back-end background, these concepts may sound similar to those that back Object Oriented Programming
 
 ### How?
-1. All React code is created in terms of components. They can have a variety of methods and variables in them, but the one thing that must be present is the `render` method.
-1. The `render` method tells the component what to visually display in the application. It uses props and state, the two other key concepts of React, to determine what HTML to produce.
-1. Because of this, whenever the props or state of a component change, the component will re-render.
+- All React code is created in terms of components. They can have a variety of methods and variables in them, but the one thing that must be present is the `render` method.
+- The `render` method tells the component what to visually display in the application. It uses props and state, the two other key concepts of React, to determine what HTML to produce.
+- Because of this, whenever the props or state of a component change, the component will re-render.
 
 ### Structure of a React Class Component
-1. React component definitions will follow a common structure
-![React_Component_Structure](https://github.com/sweinstein22/apps-manager-onboarding/images/react-component-structure.png)
+- React component definitions will follow a common structure
+![React_Component_Structure](https://raw.githubusercontent.com/sweinstein22/apps-manager-onboarding/master/images/react-component-structure.png)
 
 ### Self-Closing Components
-1. A self closing component is a component that does not need any code in between the opening and closing tags.
-1. For example, `svg` components do not need content, just a `src` property.
+- A self closing component is a component that does not need any code in between the opening and closing tags.
+- For example, `svg` components do not need content, just a `src` property.
 
 ### Functional Components vs Class Components
-1. Generally when talking about components we will be referring to class components. However, there are two different types of components, functional and class.
-1. They used to have different use cases, but in React 16.8 a feature called Hooks was introduced that allows them to be used more interchangeably.
-1. Previously, functional components had to be stateless and could not use React lifecycle methods. There are now hooks for this (`useState` and `useEffect` respectively).
-1. As of now, most of Apps Manager's code is written as class components
+- Generally when talking about components we will be referring to class components. However, there are two different types of components, functional and class.
+- They used to have different use cases, but in React 16.8 a feature called Hooks was introduced that allows them to be used more interchangeably.
+- Previously, functional components had to be stateless and could not use React lifecycle methods. There are now hooks for this (`useState` and `useEffect` respectively).
+- As of now, most of Apps Manager's code is written as class components
 
 ### Resources
-1. [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-1. [Functional vs Class Components](https://guide.freecodecamp.org/react/functional-components-vs-class-components/)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Functional vs Class Components](https://guide.freecodecamp.org/react/functional-components-vs-class-components/)
 
 ---
 
 Props
 
 ### Why?
-1. Props, short for properties, is one of the two ways React handles data. Developers can use props to pass data through to components.
-1. They help make React components reusable, as often we want to reuse a component but change its content or data.
+- Props, short for properties, is one of the two ways React handles data. Developers can use props to pass data through to components.
+- They help make React components reusable, as often we want to reuse a component but change its content or data.
 
 ### How?
-1. Props are passed from a parent component to a child component as an object under `this.props`. They can then be destructred and used individually, as in the example below.
-1. They can also be defaulted, with the `static defaultProps` declaration, assigned as an object with keys that match the props you want to default.
-![React_Props_Example](https://github.com/sweinstein22/apps-manager-onboarding/images/react-props-example.png)
-1. Note that there are different ways of doing this. In this example, the parent component 'spreads' the properties into the instantiation of the child component, sometimes also referred to as 'splatting in properties'. The properties are then 'destructured' by the child component.
-1. To see more examples of components and properties in action, and alternative ways this can be done, check out [this codepen](https://codepen.io/sweinstein22/pen/mNzwey?editors=0010).
+- Props are passed from a parent component to a child component as an object under `this.props`. They can then be destructred and used individually, as in the example below.
+- They can also be defaulted, with the `static defaultProps` declaration, assigned as an object with keys that match the props you want to default.
+![React_Props_Example](https://raw.githubusercontent.com/sweinstein22/apps-manager-onboarding/master/images/react-props-example.png)
+- Note that there are different ways of doing this. In this example, the parent component 'spreads' the properties into the instantiation of the child component, sometimes also referred to as 'splatting in properties'. The properties are then 'destructured' by the child component.
+- To see more examples of components and properties in action, and alternative ways this can be done, check out [this codepen](https://codepen.io/sweinstein22/pen/mNzwey?editors=0010).
 
 ### Resources
-1.  [Spreading properties](https://zhenyong.github.io/react/docs/jsx-spread.html)
+-  [Spreading properties](https://zhenyong.github.io/react/docs/jsx-spread.html)
 
 ---
 
 State
 
 ### Why?
-1. State is the second ways React handles data. State in a React component is its own local state, which cannot be accessed or modified outside the component.
-1. This is similar to variables that are declared within a function, and therefore only available within the scope of a function.
+- State is the second ways React handles data. State in a React component is its own local state, which cannot be accessed or modified outside the component.
+- This is similar to variables that are declared within a function, and therefore only available within the scope of a function.
 
 ### How?
-1. State is initialized in the constructor of a component, and is accessed using `this.state.{property_name}`.
-1. State can be set using the `this.setState({key: value})` method. 
-1. To see this state functionality at play, check out [this codepen](https://codepen.io/sweinstein22/pen/LwgjxR?editors=0010).
-1. Note that in this example changing the state determines whether or not a class name is given to a particular element, which in turn uses CSS show show or hide the div.
+- State is initialized in the constructor of a component, and is accessed using `this.state.{property_name}`.
+- State can be set using the `this.setState({key: value})` method. 
+- To see this state functionality at play, check out [this codepen](https://codepen.io/sweinstein22/pen/LwgjxR?editors=0010).
+- Note that in this example changing the state determines whether or not a class name is given to a particular element, which in turn uses CSS show show or hide the div.
 
 ---
 
