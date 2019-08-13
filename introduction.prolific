@@ -29,7 +29,27 @@ React embodies a framework for creating web applications that replaces the previ
 - Rather than worrying about the page as a whole, React encourages turning pieces of code into modular, self-contained components
 - Components can be composed within each other to get to the end result you’re aiming for without having to worry about the entire end result at once
 - React also allows us to use JSX, which lets us put HTML-like structures and Javascript together
-![JSX vs Javascript Only](https://raw.githubusercontent.com/sweinstein22/apps-manager-onboarding/master/images/jsx-vs-js-only.png)
+
+JSX and Javascript:
+```
+ReactDOM.render(
+  <div>
+    <h1>Batman</h1>
+  </div>,
+  root
+);
+
+```
+
+Javascript Only:
+```
+ReactDOM.render(React.createElement(
+  "div", null,
+  React.createElement(
+    "h1", null, "Batman"
+  ) 
+), destination);
+```
 
 ### Resources
 [Diagram with less common lifecycle methods](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
