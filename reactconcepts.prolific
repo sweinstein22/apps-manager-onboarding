@@ -12,7 +12,29 @@ Components
 
 ### Structure of a React Class Component
 - React component definitions will follow a common structure
-![React_Component_Structure](https://raw.githubusercontent.com/sweinstein22/apps-manager-onboarding/master/images/react-component-structure.png)
+
+```
+// import statements: //
+import React from 'react';
+
+// component declaration: //
+class AppInfo extends React.PureComponent {
+ 
+// lifecycle methods: //
+ componentDidMount () {
+ }
+
+// render method: //
+ render() {
+   return (
+     <div>such structure much components</div>
+   );
+ }
+}
+
+// export statement: //
+export default AppInfo;
+```
 
 ### Self-Closing Components
 - A self closing component is a component that does not need any code in between the opening and closing tags.
@@ -39,7 +61,51 @@ Props
 ### How?
 - Props are passed from a parent component to a child component as an object under `this.props`. They can then be destructred and used individually, as in the example below.
 - They can also be defaulted, with the `static defaultProps` declaration, assigned as an object with keys that match the props you want to default.
-![React_Props_Example](https://raw.githubusercontent.com/sweinstein22/apps-manager-onboarding/master/images/react-props-example.png)
+
+#### Example: 
+Parent React Component
+```
+import React from 'react';
+import AppInfo from './app_controls.js';
+
+class AppInfoParent extends React.PureComponent {
+
+ render() {
+   return (
+     <AppInfo {...{
+       app: {guid: 'some-app-guid', name: 'My App'},
+       titleClassName: 'my-app-info'
+     }}>
+   );
+ }
+}
+
+```
+
+React Component with Props:
+``` 
+import React, {Fragment} from 'react';
+
+class AppInfo extends React.PureComponent {
+ static defaultProps = {
+   titleClassName: 'generic-app-info'
+ };
+
+ render() {
+   const {app, titleClassName} = this.props;
+   return (
+     <Fragment>
+       <h1 className={titleClassName}>
+         {app.name}
+       </h1>
+       <div>{app.guid}</div>
+     </Fragment>
+   );
+ }
+}
+
+export default AppInfo;
+```
 - Note that there are different ways of doing this. In this example, the parent component 'spreads' the properties into the instantiation of the child component, sometimes also referred to as 'splatting in properties'. The properties are then 'destructured' by the child component.
 - To see more examples of components and properties in action, and alternative ways this can be done, check out [this codepen](https://codepen.io/sweinstein22/pen/mNzwey?editors=0010).
 
